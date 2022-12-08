@@ -38,6 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //转换security要求格式数据
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
         for (String perm:userPermsList) {
+//            .trim() 删除两端多余的空格
             authorities.add(new SimpleGrantedAuthority(perm.trim()));
         }
         return new CustomUser(sysUser, authorities);

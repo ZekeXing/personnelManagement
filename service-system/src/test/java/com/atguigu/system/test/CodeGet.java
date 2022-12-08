@@ -19,11 +19,11 @@ public class CodeGet {
         // 2、全局配置
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("C:\\Users\\Administrator\\Desktop\\sys_manage\\code\\guigu-auth-parent\\service-system"+"/src/main/java");
+        gc.setOutputDir("D:\\Java\\BigThree\\guigu-auth-parent\\service-system"+"/src/main/java");
 
         // IUserService
         gc.setServiceName("%sService");	//去掉Service接口的首字母I
-        gc.setAuthor("atguigu");
+        gc.setAuthor("Zeke");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
 

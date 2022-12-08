@@ -30,7 +30,7 @@ public class SysRoleMapperTest {
         //创建条件构造器对象
         QueryWrapper<SysRole> wrapper = new QueryWrapper<>();
         //设置条件
-        //wrapper.eq("role_name","用户管理员");
+//        wrapper.eq("role_name","用户管理员");
         wrapper.like("role_name","管理员");
         //调用方法查询
         List<SysRole> list = sysRoleMapper.selectList(wrapper);
@@ -56,19 +56,18 @@ public class SysRoleMapperTest {
         SysRole sysRole = sysRoleMapper.selectById(1);
 
         //设置修改值
-        sysRole.setDescription("系统管理员尚硅谷");
-
+        sysRole.setDescription("系统管理员");
         //调用方法实现修改
-        sysRoleMapper.updateById(sysRole);
+        sysRoleMapper.updateById(sysRole );
     }
 
     //2 添加操作
     @Test
     public void add() {
         SysRole sysRole = new SysRole();
-        sysRole.setRoleName("测试角色2");
-        sysRole.setRoleCode("testManager2");
-        sysRole.setDescription("测试角色2");
+        sysRole.setRoleName("测试角色1");
+        sysRole.setRoleCode("testManager1");
+        sysRole.setDescription("测试角色1");
         int rows = sysRoleMapper.insert(sysRole);
         System.out.println(rows);
     }

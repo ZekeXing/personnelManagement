@@ -38,6 +38,7 @@ public class IndexController {
         //判断密码是否一致
         String password = loginVo.getPassword();
         String md5Password = MD5.encrypt(password);
+        System.out.println(md5Password);
         if(!sysUser.getPassword().equals(md5Password)) {
             throw new GuiguException(20001,"密码不正确");
         }

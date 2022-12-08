@@ -140,8 +140,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         List<SysMenu> sysMenuList = null;
         //判断是否管理员
         if("1".equals(userId)) {
-            sysMenuList =
-                    baseMapper.selectList(new QueryWrapper<SysMenu>().eq("status",1));
+            sysMenuList = baseMapper.selectList(new QueryWrapper<SysMenu>().eq("status",1));
         } else {
             sysMenuList = baseMapper.findMenuListUserId(userId);
         }
